@@ -1,0 +1,31 @@
+{
+  "name": "discord-sea-of-thieves",
+  "version": "1.0.0",
+  "description": "Sea of Thieves - Factions",
+  "main": "app.js",
+  "dependencies": {
+    "discord.js": "^11.3.2",
+    "dotenv": "^5.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DjLeChuck/discord-sea-of-thieves-factions.git"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "sea",
+    "of",
+    "thieves"
+  ],
+  "author": "DjLeChuck",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DjLeChuck/discord-sea-of-thieves-factions/issues"
+  },
+  "homepage": "https://github.com/DjLeChuck/discord-sea-of-thieves-factions#readme"
+}
