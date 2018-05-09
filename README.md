@@ -1,4 +1,4 @@
-**Sea of Thieves - Factions - v1.0.0**
+**Sea of Thieves - Factions - v1.0.1**
 
 __List of available commands:__
 
