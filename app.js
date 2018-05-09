@@ -1,4 +1,4 @@
-const BOT_VERSION = "v1.0.0";
+const BOT_VERSION = "v1.0.1";
 
 const Discord = require("discord.js");
 const client = new Discord.Client();
@@ -13,7 +13,12 @@ client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-client.on("message", message => {
+client.on("message", async message => {
+  // Ignore all bots.
+  if (message.author.bot) {
+    return;
+  }
+
   const { content, member, channel } = message;
 
   if (COMMAND_TRIGGER !== content.substring(0, COMMAND_TRIGGER.length)) {
@@ -87,8 +92,11 @@ __List of available commands:__
   }
 
   // Apply the new nickname
-  member.setNickname(newNickname)
-    .catch(message.reply("sorry, I was not able to do this..."));
+  try {
+    await member.setNickname(newNickname);
+  } catch (e) {
+    message.reply("sorry, I was not able to do this...");
+  }
 });
 
 client.login(process.env.BOT_TOKEN);
